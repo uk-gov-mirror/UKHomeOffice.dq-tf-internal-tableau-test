@@ -1,8 +1,8 @@
 locals {
   internal_reporting_dev_count     = var.environment == "prod" ? "0" : "0"
   internal_reporting_qa_count      = var.environment == "prod" ? "0" : "0"
-  internal_reporting_stg_count     = var.environment == "prod" ? "1" : "0"
-  internal_reporting_upgrade_count = var.environment == "prod" ? "0" : "1"
+  internal_reporting_stg_count     = var.environment == "prod" ? "0" : "0"
+  internal_reporting_upgrade_count = var.environment == "prod" ? "0" : "0"
 }
 
 resource "aws_db_subnet_group" "rds" {
